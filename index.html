@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulari Test</title>
+    <!-- Linkem el .css -->
+    <link href="./style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="title">
+      <h1>Formulari</h1>
+    </div>
+    <!-- Muntem el formulari -->
+    <form id="formulari" action="./form.php" method="POST">
+        <!-- Nom -->
+        <label for="name">Nom*:</label>
+        <input type="text" id="name" name="name" placeholder="Per exemple: Marc" required>
+        <!-- Cognoms -->
+        <label for="surname">Cognoms*:</label>
+        <input type="text" id="surname" name="surname" placeholder="Per exemple: Nadal torres" required>
+        <!-- Correu Electrónic -->
+        <label for="email">Correu Electrónic*:</label>
+        <input type="email" id="email" name="email" placeholder="Per exemple: test.prova@gmail.com" required>
+        <!-- DNI -->
+        <label for="dni">DNI*:</label>
+        <input type="text" id="dni" name="dni" maxlength="9" pattern="[0-9]{8}[A-Za-z]{1}" placeholder="Per exemple: 123456789Z" required>
+        <!-- Comunitat Autònoma -->
+        <label for="comunitat">Comunitat Autònoma*:</label>
+        <select type="text" id="comunitat" name="comunitat">
+          <option value="" disabled selected>--Escolleix una--</option>
+          <option value="Andalusia">Andalusia</option>
+          <option value="Aragó">Aragó</option>
+          <option value="Principat d'Astúries">Principat d'Astúries</option>
+          <option value="Illes Balears">Illes Balears</option>
+          <option value="Canàries">Canàries</option>
+          <option value="Castella i Lleó">Castella i Lleó</option>
+          <option value="Castella-la Manxa">Castella-la Manxa</option>
+          <option value="Catalunya">Catalunya</option>
+          <option value="Comunitat Valenciana">Comunitat Valenciana</option>
+          <option value="Extremadura">Extremadura</option>
+          <option value="Galícia">Galícia</option>
+          <option value="Comunitat de Madrid">Comunitat de Madrid</option>
+          <option value="Regió de Múrcia">Regió de Múrcia</option>
+          <option value="Comunitat Foral de Navarra">Comunitat Foral de Navarra</option>
+          <option value="País Basc">País Basc</option>
+          <option value="Ciutat Autònoma de Ceuta">Ciutat Autònoma de Ceuta</option>
+          <option value="Ciutat Autònoma de Melilla">Ciutat Autònoma de Melilla</option>
+        </select>
+        <!-- Enviar -->
+        <input id="submit" name="submit" type="submit" value="Enviar!">
+    </form>
+  </body>
+</html>
